@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- ETIQUETAS REQUERIDAS -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+  <title>Dinojera</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="script" href="/service-worker.js">
+ 
+
+</head>
+
+<body  style="background-color:#40c5bc5d;">
+  <section class="hero is-medium is-link" style="padding-top: 10px; background-color: rgba(158, 179, 179, 0.541); border-radius: 100px;">
+    <div class="hero-body">
+      <h1 style="text-align: center; font-size: 40px; color: black;">Juguetes prehistoricos directo a tu colección</h1>
+      <img class="card--avatar" style="width: 100px; margin: auto;" src="https://pre00.deviantart.net/0b5a/th/pre/i/2015/147/c/7/jurassic_park_logo__allosaurus__whitei_by_asuma17-d8orcww.png" />
+      <p class="title" style="align-items: center; text-orientation: sideways-right;">
+        <span>Dinojera</span>
+     </p>
+      <div class="container" >
+      </div>
+    </div>
+    </section>>
+</body>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('service-worker.js', {
+            scope: '/below/'
+          })
+          .then(registration => {
+            console.log('SW registered with scope:', registration.scope);
+          })
+          .catch(err => {
+            console.error('Registration failed:', err);
+          });
+        });
+      }
+      </script>
+</html>
+
